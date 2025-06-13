@@ -97,7 +97,9 @@ fun QuestionScreen(
                     .padding(vertical = 8.dp),
                 colors = buttonColors,
                 // Button wird nach Anklicken disabled
-                enabled = !isAnswered
+                //auskommentiert, weil die Farben sonst nicht angezeigt werden,
+                //aber dadurch wird eine kurze Vorschau der nächsten Antworten sichtbar:
+                //enabled = !isAnswered
             ) {
                 Text(answerText, color = textColor)
             }
@@ -115,7 +117,7 @@ fun QuestionScreen(
                 },
                 modifier = Modifier.padding(top = 24.dp)
             ) {
-                Text(if (currentQuestionIndex < sampleQuestions.size - 1) "Next Question" else "Finish Quiz")
+                Text(if (currentQuestionIndex < sampleQuestions.size - 1) "Nächste Frage" else "Quiz beenden")
             }
         }
         // Anzeige des Punktestands am unteren Rand des Bildschirms
